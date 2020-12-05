@@ -8,8 +8,8 @@
 
 ## **Lesson 2: Introduction to AI and Machine Learning**
 
-### Overview
-> ### Lesson Outline 
+> ### Overview
+ ### Lesson Outline 
 - Overview of AI
 - Machine Learning
 - Neural Networks
