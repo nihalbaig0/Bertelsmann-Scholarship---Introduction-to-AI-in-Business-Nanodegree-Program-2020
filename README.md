@@ -391,7 +391,7 @@ Do we need Tradional Machine Learning approach or Deep Learning approach?
 - It really depends on the problem you are solving and the data available to solve that problem.
 
 Need for deep learning vs traditional ML
-- Deep learning outperforms with large datasets. ML will worl better with smaller datasets.
+- Deep learning outperforms with large datasets. ML will work better with smaller datasets.
 - Deep learning techniques will require more powerful infrastructure.
 - Deep learning is about learning features rather than manually engineering them
 - Deep learning shines when applied to complex/multidimensinal problems: image classification, natural language processing, speech recognition.
