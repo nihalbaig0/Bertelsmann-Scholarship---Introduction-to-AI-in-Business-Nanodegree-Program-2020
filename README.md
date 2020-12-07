@@ -6,7 +6,10 @@
   - [Table of Contents](#table-of-contents)
   - [**Lesson 2: Introduction to AI and Machine Learning**](#lesson-2-introduction-to-ai-and-machine-learning)
   - [**Lesson 3: Using AI and Machine Learning in Business**](#lesson-3-using-ai-and-machine-learning-in-business)
+  - [**Lesson 1: Data Fit and Annotation**](#lesson-1-data-fit-and-annotation)
+
 ## **Lesson 2: Introduction to AI and Machine Learning**
+
 
 > ### Overview
  ### Lesson Outline 
@@ -519,3 +522,154 @@ Development and Operations (DevOps)
     - Pros: It's easy to measure and highly correlated with business growth. Cons:white_frowning_face:: Doesn't answer the context for the data points 1-10. Also, often too small sample of participants in this (voluntary) survey.
 
 **[⬆ back to top](#table-of-contents)**
+
+## **Lesson 1: Data Fit and Annotation**
+
+> ### Answering Questions with Data
+- A good product manager will know a lot about their product and how it might be improved with machine learning techniques
+
+Example : Improved Search Result
+
+- Return relevent results
+- Return results, tailored to individial preferences
+
+> ### As Good as the Data
+
+- How a model performs depends heavily on the training data you give it
+
+Data Size
+- Do you have enough data? 
+- Just a few data point will create bias and accuracy in the resulted model
+- A good data set that has many examples of the different classes of data will help the model generalize better when faced with new user data
+
+Garbage in, Garbage out
+
+*In computer science, garbage in, garbage out (GIGO) describes the concept that flawed, or nonsense input data produces nonsense output or garbage.*
+
+- Data Size
+    - If you are using a deep learning algorithm, as opposed to some traditional machine learning techniques, data size is even more important.
+
+    - Deep learning (neural networks) often need to see many examples of every possible category before they can learn to distinguish between different classes of data and find general patterns in some data. If you have too few data points _or_ your data is not evenly distributed between different categories that you want to distinguish, you could get some significant [sampling bias](https://en.wikipedia.org/wiki/Sampling_bias "sampling bias") in your end predictions; predictions that are biased towards classifying all data into one class, for example, or predictions that have learned to find patterns that are irrelevant to the task at hand.
+
+Data Distribution and Pattern Detection:
+- Credit card fraud detection: most credit card transactions are valid, and so these datasets often have thousands of valid examples and very few examples of fraudulent transaction data, so you'd need to take steps to account for this imbalance otherwise a model will likely learn to classify all new data as valid since that is the most likely choice.
+- You might think of building a classifier to distinguish wolves from dogs. If all wolves are images with a snowy background, a machine learning model might mistakenly conflate snow with wolves, and you'll need more, varied data to create an accurate model.
+
+> ### Data Fit
+
+Ensuring Data Fit
+- Use production data to ensure the training data matches real-world scenerios
+- Determine the success criteria for a trained model:
+    - Precision
+    - Recall
+    - F1 score
+    - If not met -> re-train, go back to the data
+
+- Precision indicates how often the model is correct when it predicts the positive label
+
+- Recall indicates how many of the true positives your model predicted
+- F1 score is a combination of precision and recall 
+
+- A [confusion matrix](https://en.wikipedia.org/wiki/Confusion_matrix#Table_of_confusion "confusion matrix") displays the number of true positives, true negatives, false positives, and false negatives given some number of input data points n.
+- The accuracy, for example, will be the number of true positives + true negatives divided by the total number of data points.
+
+- precision is defined as the number of true positives (truly fraudulent transaction data, in this case) over all positives, and will be the higher when the amount of false positives is low.
+
+- recall is defined as the number of true positives over true positives plus false negatives and will be higher when the number of false negatives is low.
+
+- F1 score = 2 * (Precision * Recall) / (Precision  + Recall)
+
+> ### Data Collection & Relevance Quiz
+- Say you are building a product that aims to recognize the make and model of a car (ex. Toyota Camry, 2001) in images of different streets and roads. How might you collect or create data that is useful for this task?
+    - Ideally collect data from your product,say images that your company has taken and submit them to car experts.
+    
+One of my favorite articles that involves detailed, car-data collection, is a [paper](https://www.pnas.org/content/114/50/13108 "paper") by Timnit Gebru et al, about building a car dataset and using it to estimate the characteristics of certain geographical areas. Their method for data collection and creation (which uses a combination of approaches) is detailed [in this appendix](https://www.pnas.org/content/pnas/suppl/2017/11/27/1700035114.DCSupplemental/pnas.1700035114.sapp.pdf "in this appendix").
+
+- Say you are building a customer experience bot that aims to group types of restaurant reviews. Your manager has asked you to flag common issues like cleanliness and service at different restaurants. What kind of data would be most relevant to this task?
+    - Text reviews sorted into specific complaint categories like hygiene and service
+> ### Data Completeness
+
+Data Completeness
+- What is the problem you're trying to solve and how does it benefit your end users?
+
+- What data will help you solve that problem?
+    - Collect data and observe relationships; patterns and similarities
+    - Identify potential anomalies or missing data
+- Conduct research and get the best data to serve your use case
+
+> ### Appen's Data Annotation Platform
+Adding Annotations via a Platform
+- To annotate a new data source that perhaps only includes images of flowers and no other identifying labels or features, you'll have to a data annotation platform. These platforms will send unlabeled data to some human annotators who can classify or provide features for the data and send it back to you in a tabular format.
+
+- Some cloud service providers like AWS provide data annotation services as do specific companies; data annotation tooling is what the company, Figure Eight does and so we will use their platform as an example, but the skills you learn here about designing labels and creating a dataset will be applicable, across different platforms.
+
+> ### Template Jobs Quiz
+What are the default, possible, output labels for a Sentiment Analysis data labeling job?
+- Positive
+- Negative
+- Neutral
+
+> ### Case Study: Parking Signs & Figure Eight
+
+- Data annotation platform
+    - Uploading data
+    - Designing an annotation job
+    - Creating test questions
+    - Monitoring results
+    
+> ### The Platform
+----
+> ### Job Design
+- CML - Custom Markup Language (an HTML based language)
+
+> ### Instructions & Examples
+types of parking sign images
+- different kinds of parking sign
+- images from the actual dataset (marked)
+- hard to see parking sign
+- there are no parking sign(other signs may be there)
+- No sign at all
+
+> ### Example Design Quiz
+Which two kinds of examples should you include in your instructions for any data annotation? (Check two answers.)
+- At least one example for each possible data annotation
+- Ambiguous or tricky annotation
+
+> ### Test Questions
+- You want to create a set of test question for a job which is essentially ground truth data. Where you provide an answer to an question
+- When a contributor misses a test question they are shown the correct ans after they submit.
+Along with a reason why they were incorrect
+- One thing to note about your test question is that you do want to make sure you have a pretty even answer distribution.
+
+You want to make sure:
+- You are testing contributors on all possible answer type and you are not training them to lean more to a specific ans.
+- You want to train them to look out for everything that might appear in a training dataset.
+- Launching a subset of data is recommended
+- What the contributors miss the model may also miss
+
+> ### Auditing Results
+
+- Auditing the test quetion gives you a chance to identify where contributors misunderstand the job . Go back update the instruction. update the design . Create more test question.
+
+- Then you can design if you want to launch another test or you got the expected result in first try
+
+> ### Planning for Failure
+
+Designing for the Unknown
+- How do you handle cases the model hasn't seen before?
+- Design an option with the least negative impact
+
+> ### Planning for Longevity
+
+- If your data does not change , you can use a static model (no need for updates)
+- For ever-evolcing data, which is common, you should use a dynamic model
+    - Continously trained on new data
+    - So, it can keep learning
+
+- For frequently changing data, you may need to change the annotation job and update your data to include more relevant definitions or examples
+
+> ### Summary of Topics
+- The underlying data determines the efficacy and accuracy of a model
+- Data completeness and product fit are important considerations when using machine learning in a product
+- You can build a dataset by designing a data annotation job
+- You should update your data annotations or model, as needed, according to changes in the underlying data
