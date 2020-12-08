@@ -7,8 +7,10 @@
   - [**Lesson 2: Introduction to AI and Machine Learning**](#lesson-2-introduction-to-ai-and-machine-learning)
   - [**Lesson 3: Using AI and Machine Learning in Business**](#lesson-3-using-ai-and-machine-learning-in-business)
   - [**Lesson 1: Data Fit and Annotation**](#lesson-1-data-fit-and-annotation)
+  - [**AMA Session 1**](#ama-session-1)
 
 ## **Lesson 2: Introduction to AI and Machine Learning**
+
 
 
 > ### Overview
@@ -673,3 +675,7 @@ Designing for the Unknown
 - Data completeness and product fit are important considerations when using machine learning in a product
 - You can build a dataset by designing a data annotation job
 - You should update your data annotations or model, as needed, according to changes in the underlying data
+
+
+## **AMA Session 1**
+You can find all question and answers in this [link](https://docs.google.com/document/d/1k1BKAZ9TPxb5oamY-Mbzk_yAoQNL2LjmJQk523RaxFk/edit "link")
