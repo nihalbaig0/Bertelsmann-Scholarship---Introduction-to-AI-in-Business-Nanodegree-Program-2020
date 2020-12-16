@@ -7,9 +7,11 @@
   - [**Lesson 2: Introduction to AI and Machine Learning**](#lesson-2-introduction-to-ai-and-machine-learning)
   - [**Lesson 3: Using AI and Machine Learning in Business**](#lesson-3-using-ai-and-machine-learning-in-business)
   - [**Lesson 1: Data Fit and Annotation**](#lesson-1-data-fit-and-annotation)
+  - [**Optional Project: Create a Medical Image Annotation Job**](#optional-project-create-a-medical-image-annotaion-job)
   - [**AMA Session 1**](#ama-session-1)
 
 ## **Lesson 2: Introduction to AI and Machine Learning**
+
 
 
 
@@ -206,6 +208,9 @@ You can read about reinforcement learning in this [article](https://en.wikipedia
 [GUIDE TO UNSUPERVISED MACHINE LEARNING: 7 REAL LIFE EXAMPLES](https://theappsolutions.com/blog/development/unsupervised-machine-learning/ "GUIDE TO UNSUPERVISED MACHINE LEARNING: 7 REAL LIFE EXAMPLES")
 
 [Artificial Intelligence, Machine Learning, Deep Learning — Characteristics and Differences](https://medium.com/swlh/artificial-intelligence-machine-learning-deep-learning-characteristics-and-differences-ddb4bda470c4 "Artificial Intelligence, Machine Learning, Deep Learning — Characteristics and Differences")
+
+[Why Deep Learning over Traditional Machine Learning?](https://towardsdatascience.com/why-deep-learning-is-needed-over-traditional-machine-learning-1b6a99177063 "Why Deep Learning over Traditional Machine Learning?")
+
 ## Related Videos
 [AI VS ML VS DL VS Data Science](https://www.youtube.com/watch?v=k2P_pHQDlp0 "AI VS ML VS DL VS Data Science")
 
@@ -213,7 +218,8 @@ You can read about reinforcement learning in this [article](https://en.wikipedia
 
 [Deep Learning - Overview, Practical Examples, Popular Algorithms](https://www.analyticssteps.com/blogs/deep-learning-overview-practical-examples-popular-algorithms "Deep Learning - Overview, Practical Examples, Popular Algorithms")
 
-[]( "")
+[Reinforcement Learning Series Intro](https://www.youtube.com/watch?v=nyjbcRQ-uQ8&list=PLZbbT5o_s2xoWNVdDudn51XM8lOuZ_Njv "Reinforcement Learning Series Intro")
+
 ## **FAQ** :
 -  In the comparison between supervised and unsupervised learning they mentioned Dimensionality Reduction which is continuous and unsupervised. But I can not understand the term Dimensionality Reduction and what it means.
     - Ans: I am working in a gaming company. In order to analyse churn of a player, there are many dimensions (parameters) which plays a role in churn of a customer. Let's say difficulty of the level, Loading speed, whether advertisement is there or not, whether it is repetitive, etc... There may be 20-30 dimensions with which the churn will be based on. But if you see correlation of churn and every dimentions, for many dimentions, the correlation will be very low. So I'm order to reduce the complexity, we will do dimensionality reduction! 
@@ -224,6 +230,8 @@ You can read about reinforcement learning in this [article](https://en.wikipedia
     - It's interesting you mention a meaningful model. In most cases a model using dimensional transformation will be less explainable than one using the raw features. This is because the composite features generated may not easily correspond to real values. As an example, consider a case where you're looking to forecast house price based on a number of features, including # of rooms, # sq ft, # total rooms. There is likely a correlation between these values so these three features could be reduced into a single dimension which is less interpretable
 -  What is 'weights'  and threshold.  If you can give examples of weights and threshold it will be great!
     - Ans: weights are actually parameters which define the strength of the connection between units.For example, here "Am I free" has more weightage for our decision to go to a work colleague's party
+- Can someone tell me why in the question about when to update the classification model, the answer “The model accuracy stayed the same over time” is not a correct answer? I mean wouldn’t you want to increase your accuracy? Or is there another layer to this I am not gettin? 
+    - The model only gets more accurate while training. Afterwards when you apply it it just does what you taught before. But it will not get any feedback if it was right or wrong. If you want it to get more accurate, you have to feed it with more information it can learn from. So I guess there are two different kinds of input you can get to your model: one is such what the model learns from and the other is that the model only applies what it already knows. So I guess if I want the model to get more accurate while applying I would probably have to add information of the learning type, maybe like a feedback button if my model was right or wrong... but not sure about that,
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -502,6 +510,9 @@ Development and Operations (DevOps)
 
 [The Scrum Primer](https://scrumprimer.org/ "The Scrum Primer")
 
+[11 steps of Scrum](https://luminousmen.com/post/11-steps-of-scrum "11 steps of Scrum")
+
+[How to measure NPS](https://www.qualtrics.com/uk/experience-management/customer/measure-nps/ "How to measure NPS")
 
 ## Related Videos :
 
@@ -522,6 +533,16 @@ Development and Operations (DevOps)
 - Can somebody enlighten me on the actual worth of the Net Promoter Score metric ? I hear contradicting opinions, some ( research papers) stating that it is not a reliable metric in some cases.
     - Hi! I also think it is a bit tricky. You remember the meme about recommending Windows? :slightly_smiling_face: There was an awesome reply that people don't recommend operating systems to each other in regular conversations. It's true for NPS as well. I'm not going to promote a company among my friends just because I like it. Sometimes I do, yes, but very rarely. Maybe when they ask for advice, like which running shoe is the best.
     - Pros: It's easy to measure and highly correlated with business growth. Cons:white_frowning_face:: Doesn't answer the context for the data points 1-10. Also, often too small sample of participants in this (voluntary) survey.
+- Have a question regarding the Business Case issue: I didn't quite get why steps 5-8 are better to accomplish the task to find a photo for marketing collateral. Thank you for your ideas!
+    - I think steps 5-8 are the best match for the task because gathering photos based on high (or low) conversion is not necessarily a computer vision task. You could do that just by associating the converted value with its image identifier, for example. Based on the previously given visual criteria, the Computer Vision algorithm would do exactly what's described in 5 to 8, specially step 8.
+
+- In terms of reinforcement learning, doesn't the recommendation of having a Human In The Middle to restrict bias adversely affect one of the main benefits of AI, namely being able to conduct activity at scale faster than humans could?
+    - Depends. Human intervention is good if its to improve how the model learns. It would be a waste of time and money if you let it run when the data is becoming skewed. Obviously you should let the model do as much as it can on its own, but only if you are getting meaningful data.
+The above I mentioned is very generic, but without a scenario it's hard to give a definate reply. A lot of this is up to your product manager and data analyst to decide how far you let the model run without intervention. 
+
+- Hi everyone, I just finished the intro to AI in business. Can anyone help me with the difference between Clustering and Association in Unsupervised Learning?
+    - Clustering is when similar attributes are grouped together (if you have more than two legs, you're more likely to be an animal). Association is a method for discovering interesting relationships (if you buy onions and potatoes in a store, you're likely to also buy burgers).
+- In Association we want to find possible groups of products that are related to each other. for example, we found out that in a shopping store, people who buy breeds usually buy milk and sugar too. in this situation we use Association Rules to identify these kinds of relation then we can put these related products close to each other on the shelves. But in clustering, the aim is to identify the group of people with similar interests for samples all those who have bought milk and cola are in one cluster..
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -676,6 +697,113 @@ Designing for the Unknown
 - You can build a dataset by designing a data annotation job
 - You should update your data annotations or model, as needed, according to changes in the underlying data
 
+## **Related Articles** 
+[What’s the deal with Accuracy, Precision, Recall and F1?](https://towardsdatascience.com/whats-the-deal-with-accuracy-precision-recall-and-f1-f5d8b4db1021 "What’s the deal with Accuracy, Precision, Recall and F1?")
+
+[What is Data Annotation and What are its Advantages?](https://medium.com/anolytics/what-is-data-annotation-and-what-are-its-advantages-95766213351e "What is Data Annotation and What are its Advantages?")
+
+[Simple guide to confusion matrix terminology](https://www.dataschool.io/simple-guide-to-confusion-matrix-terminology/#:~:text=A%20confusion%20matrix%20is%20a,related%20terminology%20can%20be%20confusing "Simple guide to confusion matrix terminology")
+## **Related Videos** 
+[Confusion Matrix | How to evaluate classification model | Machine Learning Basics](https://www.youtube.com/watch?v=jr_BcU4QlNE "Confusion Matrix | How to evaluate classification model | Machine Learning Basics")
+
+## **FAQ** :
+- recall and precision is clear but what is the origin of f1 metric?
+    - F1 Score is needed when you want to seek a balance between Precision and Recall. Right…so what is the difference between F1 Score and Accuracy then? We have previously seen that accuracy can be largely contributed by a large number of True Negatives which in most business circumstances, we do not focus on much whereas False Negative and False Positive usually has business costs (tangible & intangible) thus F1 Score might be a better measure to use if we need to seek a balance between Precision and Recall AND there is an uneven class distribution (large number of Actual Negatives).
+- I wonder if there is a general rule of the right size of dataset you need for specific project types?
+    - there is no general rule. or the better say it depends. An other rule is "there is no data like more data" The bigger the dataset (with a good qualitiy) the better the results. It also depents on the complexity of your goal. If you just have two classes you need less data than the case you have 100 classes. If you have not only classification but also position recognition, you will again need more examples.What you normaly do is to have a seperate dataset the NN does not see during training. There will be a point in Training when the result on this seperate set starts to decreasing. than you run into overfiting (to you training data). If the metrics at this point in time, on you seperate controll data set not good enough. you will need more training data. At last give a thought on the number of parameters you have in your NN. Each of this has to be adjusted multiple times. your dataset has to ensure this.Hope it was at least a little bit helpful to you (edited) 
+
+
+## **Optional Project: Create a Medical Image Annotation Job**
+
+
+## **Related Articles** 
+
+## **Related Videos** 
+[How to use Appen for Data Annotation](https://www.youtube.com/watch?v=Av1ibav03JM&amp%3Bfeature=youtu.be "How to use Appen for Data Annotation")
+
+[Appen Video Tutorials](https://success.appen.com/hc/en-us/sections/201955376-Video-Tutorials "Appen Video Tutorials")
+## **FAQ** :
 
 ## **AMA Session 1**
 You can find all question and answers in this [link](https://docs.google.com/document/d/1k1BKAZ9TPxb5oamY-Mbzk_yAoQNL2LjmJQk523RaxFk/edit "link")
+
+
+> ### Concepts
+- Overview of Modeling
+- Training Data
+- Model Evaluation
+- Transfer Learning and Automated ML
+
+> ### Activation Functions
+- Serve as the decision boundary to pass on information
+- Would like to pass a continuous value instead of strictly 0 or 1
+- Important for data flow in the model
+- Decision valaue suddenly umps to 1 whe we reach out threshold
+- This does not allow for a range of output values and restricts our ability to be uncertain
+- The sigmoid function is continuous and returns a range of values from 0 to 1
+- Model training will update weights to find the optimal parameters that handles all cases through Back Propagation
+- The node is called Perceptron
+- Multi-layer Perceptron
+    - Basic perceptron model
+    - Simple data types
+- Convolution Neural Network
+    - Convolution and pooling
+    - Common in computer vision
+- Long-Short Term Memory Network
+    - Can save internal state
+    - Common in NLP
+Further reading on [activation functions](https://medium.com/the-theory-of-everything/understanding-activation-functions-in-neural-networks-9491262884e0 "activation functions")
+
+### Backpropagation & Updating the Weights of a Network
+As a neural network trains, it starts off randomly guessing appropriate weights and will often produce the incorrect outputs, with some error that can be measured as the difference between a model-output value and a true output label or value. For a model to improve, it needs a way to:
+
+Identify the source of its error (which model weights are responsible for the error?)
+Update those weights to a new, better value
+The first step, of identifying the weights causing an output error, is referred to as backpropagation. Essentially, backpropagation looks at the output of a model and goes backwards through the nodes and layers of a network to find the source or error.
+
+Then, there is a second step, updating the weights such that their value is either increased or decreased in response to the error they caused.
+
+The cycle of backpropagation and updating weights continues until a model is trained or until it has sufficiently low error!
+
+> ### Perceptron Math
+
+> ### Modeling, Key Points
+Overview of Modeling:Summary
+- Neural networks are a series of layers comprised of computational nodes
+- Activation functions act as decision boundaries for a node
+
+> ### Training Data
+Data in ML
+
+----
+Learn by example
+- Data defines model behavior and performance
+- Model parameters are updated based on training data
+- A model will NOT learn if it's not in the data
+- Bad data = bad model
+> ### A Pet Model
+- If the model is given unknown data as long as the data is similar to training data then it is able to infer the content of the data
+- If the model is not given a particular type of data it will never be able to infer other types of data. Only after being trained on a given type of class of data will the model begin to make prediction on that type of data
+
+> ### Training Data is Key
+- Models will only learn about data that they are trained with
+- Ensure that the data used to train a model reflects real-world data
+- Use a diverse set of data to build a roboust model
+
+The Right Data
+
+---
+Diversify your data
+- Data that encompasses all likely scenarios
+- Photos from the real world (not just a studio)
+- Audio collected with background noise
+- Text of various writing styles
+- Equal amount of different types of data
+- Correctly labeled data
+
+Common Issues with Training Data
+- Unbalance or biased data
+- Data does not reflect real world data
+- Mislabeled data
+- Insufficient data
+    - There is no clear cut rule as how much data will be needed we generally want to start with a few 100 examples of each target class and then scale up the amount of training data until we reach desired accuracy
