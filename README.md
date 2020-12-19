@@ -807,3 +807,53 @@ Common Issues with Training Data
 - Mislabeled data
 - Insufficient data
     - There is no clear cut rule as how much data will be needed we generally want to start with a few 100 examples of each target class and then scale up the amount of training data until we reach desired accuracy
+
+> ### Training Data Quiz
+- What data would you need to train a voice assistant for a hotel concierge service?
+    - 10 hours of audio data of concierge desk conversations and 50 hours of audio data of the most common guest-concierge interactions with data collected froma studio, from a hotel room, and with sufficient ambient noise.
+
+> ### Training Data Summary
+- Training data will make or break a machine learning model
+- Ensure there is a variety of data and that the data reflects real world scenerios
+- Unbalanced data will cause a model to skew towards a particular outcome
+- Mislabed or dirty data will significantly impact model performance
+
+> ### Model Evaluation
+- Need robust metrics to know how our model wil perform after deployment
+- Knowing which metrics to measure will help guide model development
+- Model performance will determine the overall success of AI products
+- training data (80%) -> test data(20%)
+- It is important that the training data and test data both should be as balanced as possible.
+- Having unbalanced data in the test data may skew our perspective on the model performance
+- Training data (80%) -> validation data (10%) -> test data (10%)
+- Validation data is used during training to help inform updates to model parameters and is different from test data
+- The test data is never seen by the model until after the training is compelete
+
+Evaluation test 
+- Precision and Recall
+- Modeled precision answers the question of when the model makes a prediction how likely is that prediction to be correct?
+- Precision tells us what percentage of all the predictions were correct 
+- Recall tells us what percentage of the real occurrences were recalled by the model
+- F1 score combines the precision and the recall to produce and overall performance measure of the model
+- Generally F1-score above 0.75 or 0.8 will be considered decent. However , it will depend on the intended application and how critical the performance of the model is to the success of the product
+- The confusion matrix is a grid which shows all the predicted labels relative to all the true labels. When looking at the chart the values accross the row should add up to a 100 percent while columns have no limitaions
+
+- Why are training and test data separate?
+    - We use training data when a model is learning. In our cat/dog/gerbil example, this is the data a model can use to learn and find patterns that distinguish the different classes of images.
+
+    - After training, we need a way to test how well a trained model generalizes. The idea is: we want a trained model to perform well on new inputs, that it hasn’t seen before. This is where test data becomes useful! Because a model hasn’t seen it during training, we can test it on this dataset and evaluate its performance.
+
+> ### Model Evaluation Quiz
+What is the F1 score?
+
+Precision = 0.75
+Recall = 0.75
+
+F1 Score = ( 2 * 0.75 * 0.75) / (0.75+0.75) = 0.75
+
+> ### Model Evaluation, Key Points
+
+- The model should never see the test data until model evaluation 
+- Precision and recall are the key metrics when evaluating a model
+- F1 score provides an overall measure of model performance
+- A confusion matrix can help identify where a model is failing
