@@ -857,3 +857,48 @@ F1 Score = ( 2 * 0.75 * 0.75) / (0.75+0.75) = 0.75
 - Precision and recall are the key metrics when evaluating a model
 - F1 score provides an overall measure of model performance
 - A confusion matrix can help identify where a model is failing
+
+> ### Transfer Learning
+- We can leverage existing trained models to solve new problems
+ - In order to do transfer learning we take the first N layers of pretrained network.The number N is generally all except the last few layers.Then we copy these layers into the new model.Then we will attach new layers of network behind the old one.
+- Fine tuning is the same process but you also retrain the earlier layers.
+
+> ### Automated ML
+Less math please!
+- Services to automatically create models from data
+- Allows for quick prototyping
+- Benefit of enterprise support
+- Much less hassle and complexity
+Neural Architecture Search
+-Automatically determine best architecture for data types
+- Consists of architecture blocks that can be configured together for optimization
+- Handled by the ML service provider
+> ### Automated ML vs Custom Modeling
+Automated Machine Learning
+### Pros : 
+- Easy to get started
+- Robust enterprise support
+ - Cheap for quick development
+ ### Cons:
+ - Limited use cases
+ - Difficult to extend
+ - Data is accessible to provider
+
+ Custom Modeling
+ ### Pros :
+ - Complete customizability
+ - Unlimited use cases
+ - Full control over parameter tuning
+### Cons :
+- Expensive to get started
+- Requires ML expertise
+- Limited means of external support
+
+> ### Automated ML, Summary
+- Transfer learning uses knowledge from previous models
+- Pretrained models can be found online for use with transfer learning
+- Automated ML makes it easy to create models
+- For more complex models a custom development may be required
+> ### Outro
+- AutoML aids us to help model build faster 
+
