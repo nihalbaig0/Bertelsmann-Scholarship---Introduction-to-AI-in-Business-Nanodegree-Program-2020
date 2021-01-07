@@ -8,6 +8,7 @@
   - [**Lesson 3: Using AI and Machine Learning in Business**](#lesson-3-using-ai-and-machine-learning-in-business)
   - [**Lesson 1: Data Fit and Annotation**](#lesson-1-data-fit-and-annotation)
   - [**Optional Project: Create a Medical Image Annotation Job**](#optional-project-create-a-medical-image-annotaion-job)
+   - [**Lesson 1: Measuring Business Impact and Mitigating Bias**](#lesson-1-measuring-business-impact-and-mitigating-bias)
   - [**AMA Session 1**](#ama-session-1)
 
 ## **Lesson 2: Introduction to AI and Machine Learning**
@@ -901,4 +902,180 @@ Automated Machine Learning
 - For more complex models a custom development may be required
 > ### Outro
 - AutoML aids us to help model build faster 
+
+
+## **Lesson 1: Measuring Business Impact and Mitigating Bias**
+
+> ### Introduction to Business Impact
+
+Key topics
+- Benefits & challenges of AI initiatives
+- Define and measure success metrics
+- A/B Testing & Versioning
+- Monitor & mitigate Bias
+- Continuous Learning
+- Compliance & ethics
+- Scale
+
+> ### Case Studies and Challenges
+- Companies are building better recommendation system , better search engine , Chat bots for customer service using AI
+- AI also helps increasing internal efficiencys and adding more automations. Manufacturing and supply chain industry is in the forefront.
+- AI helps in fraud Detection and disease prediction
+- The overall benefits of AI can be put into 2 braod buckets. It sorrounds improving operations and delivering a superior customer experience.
+
+Challenges in AI for companies:
+- Number one challenge is implementation complexities.
+- People's skills in defining roles and responsibilities is another challenge.
+- Questions around how to measure and provide business values
+- Getting the right data for AI projects is also time consuming and costly
+- Protecting Privacy and ensuring their security is also a big hurdle.
+
+> ### Measuring Success
+- Defining your business goal and success metrics is first step. Then continuously monitor your success metrics
+- For different industries you may have different business goal 
+- Next Revisit you success metrics
+    - Customer experience
+    - Revenue gain
+    - Customer engagement
+    - Business process automation
+    - Better & faster decision making
+
+> ### Outcome vs. Output
+- AI products must be deployed to deliver specific and measurable business outcomes.
+- You may not want to consider a model with highest accuracy which is not delivering the right business outcome.
+
+Outcome
+- Generate Revenue
+- Improve Customer Experience
+- Increase user satisfaction
+- Automate & save cost
+
+Output
+- Accuracy
+- Execution Time
+- Recall
+- Precision
+
+**Monitor the accuracy,performance and fairness of your AI models and understand the reasoning behind the results**
+
+> ### Chatbot Example
+
+Key Success Metrics
+- Number of active users
+- Number of bot sessions initiated
+- Average chat sessions
+- Average chats handled by bot
+- Number of new users using bots daily, weekly, monthly
+
+Associated business matrics
+- Conversion rate
+- Customer support savings
+- Increase in Net Promoter Score
+- Cost per acquisition
+- Lift in engagement
+- Customer retention rate
+
+Measure , Learn , Evolve
+- User adoption and Retention
+    - How many users in the population are interacting with the chatbot?
+    - How many users come back to the bot to resolve the issuse?
+- User engagement
+    - What is the intensity and depth of the engagement?
+    - Is the chatbot able to address more complex problems?
+    - Are their specific scenerios where chatbot is more successful than others?
+- Conversion rate
+- Self service rate
+- User satisfaction
+    - Make sure you are collecting customer satisfaction by asking them to rate the interaction so you know if the bot is effective of not
+
+> ### A/B Testing & Versioning
+
+- A/B testing helps you make more data-driven decisions
+
+Designing A/B Test for Models
+- Deciding on a performance metric
+- Deciding on test type based on your performance metric
+- Choosing a minimum effect size you want to detect
+- Determining the sample size
+- Running the test until sample size is reached
+
+What else should you consider?
+- Cost benefit analysis
+    - Is x% accuracy gain beneficial for business?
+    - What if this slightly better model requires a much larger investment?
+- Run the test long enough to capture any seasonality effects
+- Control the experiment to avoid "novelty effect" - initial positive reaction that wears off
+
+- It is very common to send about 20% of your customers to a new model (v2, a "challenger" model) and 80% to a well-tested model (v1, a "controlled" model). This way, you can get some good experimental data and really see if the v2 of your model does indeed work better; if it does, you can then switch all user traffic (100%) to that new model.
+
+- You can repeat this process as necessary, and as you continually improve different versions of a model.
+
+> ### Monitor Bias
+
+- Monitoring and mitigating bias should be should be an ongoing initiative as you launch and scale your AI product
+
+What is Bias?
+- AI system are only as good as the data we put into them
+- Bad data can contain racial , gender, and ideological biases
+- Ecommerce comapnies influence these user behavious by introducing bias in the data and the subsequent product recommendation
+
+###  Unacceptable biases :
+
+- Alexa and Google Assistant are 30% less likely to understand non-American accents
+- AI Assistants Struggle To Understand Women
+- Bias Issues are in face Recognition Systems
+
+### Different types of Bias:
+- Model Bias
+    - When the model itself generate biased outcome
+- Data Bias
+    - Introduced through unbalanced selection of sorts data
+- Annotation Bias
+    - which is introduced by Humans annotating and generating the human data
+
+- The Bias is in the training data, and it comes from Humans
+
+We need diversity where subjective opinions matter
+- Sentiment Analysis
+- Search Relevance
+- Data Categorization
+- Content Moderation
+- Image Moderation
+- Audio/Text Collection for Speech AI
+---
+- If you are building a voice Assistant you have to collect data from different race , age groups and gender
+- In content modulation where you want to remove inarppropiate content
+- So if you are building a product that should work universally, you need to collect diverse opinion and train your data accordingly
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
